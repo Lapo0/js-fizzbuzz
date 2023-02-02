@@ -1,5 +1,5 @@
 // Da 1 a 100
-
+let html = '';
 for (let i = 1; i <= 100; i++) {
     let output = '';
 
@@ -11,4 +11,10 @@ for (let i = 1; i <= 100; i++) {
     }
 
     console.log(output || i);
+
+    html += `<div>${output || i}</div>`;
 }
+
+const container = document.createElement('div');
+container.innerHTML = html;
+document.body.appendChild(container);
